@@ -1,36 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<title>Restaurant</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 
 	<body>
 		<header>
-			<a href="">LOGO</a>
+			<div class="container">
+				<div class="top">
+					<a id="btn-menu" href="" class="btn-menu">
+						<i class="fa-solid fa-bars open"></i>
+						<i class="fa-solid fa-xmark close"></i>
+					</a>
 
-			<nav>
-				<ul>
-					<li>
-						<a href="">Home</a>
-					</li>
+					<a href="" class="link-logo">
+						<img class="logo" src="images/logo.png">
+					</a>
+				</div>
 
-					<li>
-						<a href="">Menu</a>
-					</li>
+				<nav class="navegacao">
+					<ul class="menu">
+						<li>
+							<a href="">Home</a>
+						</li>
 
-					<li>
-						<a href="">Reservation</a>
-					</li>
+						<li>
+							<a href="">Menu</a>
+						</li>
 
-					<li>
-						<a href="">Contact US</a>
-					</li>
-				</ul>
+						<li>
+							<a href="">Reservation</a>
+						</li>
 
-				<a href="">Reservation</a>
-			</nav>	
+						<li>
+							<a href="">Contact US</a>
+						</li>
+					</ul>
+
+					<a href="" class="btn-reservation">Reservation</a>
+				</nav>
+			</div>	
 		</header>
 
 		<main>
@@ -149,5 +169,7 @@
 
 			<button>Ao topo</button>
 		</footer>
+
+		<script src="js/index.js"></script>
 	</body>
 </html>
