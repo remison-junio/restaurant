@@ -96,3 +96,78 @@ nav.navegacao .menu {
 .btn-reservation {
 	display: none;
 }
+
+/*Footer*/
+
+footer {
+	color: white;
+	text-align: center;
+}
+
+footer .container {
+	background: rgb(33, 33, 33);
+	padding: 60px 0 0;
+	display: grid;
+	grid-template-columns: auto;
+	grid-row-gap: 50px;
+}
+
+footer .titulo {
+	font-size: 16px;
+	letter-spacing: 2px;
+	margin-bottom: 30px;
+}
+
+footer .info {
+	font-family: Arial;
+	font-size: 15px;
+}
+
+footer p.info + p.info{
+	margin-top: 20px;
+}
+
+footer .redes-sociais {
+	display: flex;
+	justify-content: center;
+}
+
+footer .redes-sociais li {
+	margin: 0 10px;
+}
+
+footer .redes-sociais a {
+	display: flex;
+	color: #bbbbbb;
+	padding: 7px;
+	font-size: 15px;
+	transition: .4s;
+}
+
+footer .redes-sociais a:hover {
+	color: white;
+}
+
+footer .copy {
+	font-family: Arial;
+	font-size: 14px;
+	line-height: 27px;
+	padding: 40px 0;
+	margin-top: 80px;
+	max-width: 455px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+footer .copy a {
+	color: #BBB;
+	transition: .3s;
+}
+
+footer .copy a:hover {
+	color: yellow;
+}
+
+footer .aoTopo {
+	display: none;
+}
