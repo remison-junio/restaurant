@@ -6,6 +6,7 @@
 
 body {
 	font-family: 'Cabin', sans-serif;
+	padding: 20px;
 }
 
 ul {
@@ -17,8 +18,7 @@ a {
 }
 
 .container {
-	padding-left: 30px;
-	padding-right: 30px;
+
 }
 
 header .container .top {
@@ -95,6 +95,82 @@ nav.navegacao .menu {
 
 .btn-reservation {
 	display: none;
+}
+
+/*Secao 6*/
+
+.secao-2, .secao-6 {
+	text-align: center;
+	padding: 50px 0 70px;
+}
+
+.secao-2 .container, .secao-6 .container {
+	display: grid;
+	grid-row-gap: 40px;
+}
+
+.secao-2 .imagens {
+	padding: 0 20px;
+}
+
+.secao-2 .imagens, .secao-6 .imagens {
+	display: grid;
+	grid-row-gap: 20px;
+}
+
+.secao-2 .imagens img, .secao-6 .imagens img {
+	width: 100%;
+}
+
+.secao-6 .imagens {
+	padding: 0 10px;
+}
+
+.secao-2 .textos p {
+	max-width: 320px;
+}
+
+.secao-2 .textos h3 {
+	color: #444444;
+	font-weight: 400;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+.secao-2 .textos h3 + h3 {
+	margin-top: 50px;
+}
+
+.secao-2 .textos h2, .secao-6 .textos h2 {
+	color: #444444;
+	font-size: 45px;
+	font-family: 'Pacifico', cursive;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+.secao-2 .textos p, .secao-6 .textos p {
+	font-size: 16px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	margin: 40px auto;
+	color: #000000;
+}
+
+.secao-6 .textos p {
+	max-width: 370px;
+}
+
+.secao-6 .textos a {
+	color: #444444;
+	font-size: 20px;
+	text-decoration: underline;
+	letter-spacing: 1px;
+	transition: .3s;
+}
+
+.secao-6 .textos a:hover {
+	color: yellow;
 }
 
 /*Footer*/
