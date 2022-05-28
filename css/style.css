@@ -17,10 +17,6 @@ a {
 	text-decoration: none;
 }
 
-.container {
-
-}
-
 header .container .top {
 	display: flex;
 	position: relative;
@@ -97,11 +93,18 @@ nav.navegacao .menu {
 	display: none;
 }
 
-/*Secao 6*/
+/*Gerais*/
 
-.secao-2, .secao-6 {
-	text-align: center;
+.container {
+	padding: 0 10px;
+}
+
+.secao-2, .secao-6, .secao-4 {
 	padding: 50px 0 70px;
+}
+
+.secao-2, .secao-3, .secao-4, .secao-5, .secao-6 {
+	text-align: center;
 }
 
 .secao-2 .container, .secao-6 .container {
@@ -109,39 +112,7 @@ nav.navegacao .menu {
 	grid-row-gap: 40px;
 }
 
-.secao-2 .imagens {
-	padding: 0 20px;
-}
-
-.secao-2 .imagens, .secao-6 .imagens {
-	display: grid;
-	grid-row-gap: 20px;
-}
-
-.secao-2 .imagens img, .secao-6 .imagens img {
-	width: 100%;
-}
-
-.secao-6 .imagens {
-	padding: 0 10px;
-}
-
-.secao-2 .textos p {
-	max-width: 320px;
-}
-
-.secao-2 .textos h3 {
-	color: #444444;
-	font-weight: 400;
-	font-size: 22px;
-	letter-spacing: 1px;
-}
-
-.secao-2 .textos h3 + h3 {
-	margin-top: 50px;
-}
-
-.secao-2 .textos h2, .secao-6 .textos h2 {
+.titulo {
 	color: #444444;
 	font-size: 45px;
 	font-family: 'Pacifico', cursive;
@@ -149,7 +120,14 @@ nav.navegacao .menu {
 	letter-spacing: 1px;
 }
 
-.secao-2 .textos p, .secao-6 .textos p {
+.sub-titulo {
+	color: white;
+	font-size: 22px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+.paragrafo {
 	font-size: 16px;
 	line-height: 30px;
 	letter-spacing: 1px;
@@ -157,11 +135,18 @@ nav.navegacao .menu {
 	color: #000000;
 }
 
-.secao-6 .textos p {
-	max-width: 370px;
+.paragrafo-secundario {
+	color: #444444;
+	font-weight: 400;
+	font-size: 22px;
+	letter-spacing: 1px;
 }
 
-.secao-6 .textos a {
+.paragrafo-secundario + .paragrafo-secundario {
+	margin-top: 50px;
+}
+
+.link {
 	color: #444444;
 	font-size: 20px;
 	text-decoration: underline;
@@ -169,8 +154,118 @@ nav.navegacao .menu {
 	transition: .3s;
 }
 
-.secao-6 .textos a:hover {
-	color: yellow;
+.link:hover {
+	color: red;
+}
+
+.galeria-grid {
+	display: grid;
+	grid-row-gap: 20px;
+}
+
+img {
+	width: 100%;
+}
+
+.bg-imagem {
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+}
+
+.opacidade:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	background: rgba(66, 66, 66, .25);
+	z-index: 2;
+}
+
+/*Secao 2*/
+
+.secao-2 .galeria-grid {
+	padding: 0 10px;
+}
+
+.secao-2 .textos .paragrafo {
+	max-width: 320px;
+}
+
+/*Seção 3*/
+
+.secao-3.bg-imagem {
+	height: 420px;
+	background-image: url(../imagens/bg-bio.jpg);
+}
+
+.secao-3 .container {
+	z-index: 3;
+}
+
+.secao-3 .titulo {
+	color: white;
+}
+
+/*Seção 4*/
+
+.secao-4 .textos .paragrafo {
+	max-width: 370px;
+}
+
+.secao-4 .galeria {
+	justify-content: center;
+	display: grid;
+	grid-template-columns: minmax(100px, 150px) minmax(100px, 150px);
+	grid-gap: 2px;
+	margin-top: 20px;
+}
+
+.secao-4 .galeria a {
+	display: flex;
+}
+
+.secao-4 .galeria img {
+	width: 150px;
+	min-width: 50px;
+}
+
+/*Seção 5*/
+
+.secao-5 .container {
+	z-index: 3;
+}
+
+.secao-5.bg-imagem {
+	height: 586px;
+	background-image: url(../imagens/chef.jpg);
+}
+
+.secao-5 .titulo {
+	color: white;
+}
+
+.secao-5 .btn {
+	background: white;
+	color: #212121;
+	font-size: 15px;
+	border-radius: 5px;
+	padding: 12px 20px;
+	margin-top: 20px;
+	display: inline-block;
+	font-weight: 400;
+}
+
+/*Secao 6*/
+
+.secao-6 .textos .paragrafo {
+	max-width: 370px;
 }
 
 /*Footer*/
@@ -182,19 +277,19 @@ footer {
 
 footer .container {
 	background: rgb(33, 33, 33);
-	padding: 60px 0 0;
+	padding: 60px 10px 0;
 	display: grid;
 	grid-template-columns: auto;
 	grid-row-gap: 50px;
 }
 
-footer .titulo {
+.footer-titulo {
 	font-size: 16px;
 	letter-spacing: 2px;
 	margin-bottom: 30px;
 }
 
-footer .info {
+.info {
 	font-family: Arial;
 	font-size: 15px;
 }
