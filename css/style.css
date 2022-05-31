@@ -26,6 +26,7 @@ header .container .top {
 	position: relative;
 	height: 100px;
 	align-items: center;
+	padding: 0 5px;
 }
 
 .btn-menu {
@@ -46,7 +47,7 @@ header .container .top {
 	display: block;
 }
 
-.btn-menu.active .open, .btn-menu .close {
+.btn-menu.active .open, .btn-menu .close, .btn-reservation.btn-link {
 	display: none;
 }
 
@@ -91,10 +92,6 @@ nav.navegacao .menu a {
 nav.navegacao .menu {
 	background: #212121;
 	padding: 30px 0;
-}
-
-.btn-reservation {
-	display: none;
 }
 
 /*Gerais*/
@@ -162,6 +159,18 @@ nav.navegacao .menu {
 	color: var(--color-yellow);
 }
 
+.btn-link {
+	border: 1px solid white;
+	display: inline-block;
+	padding: 9px 25px;
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 2px;
+	border-radius: 4px;
+	color: white;
+	transition: .3s;
+}
+
 .galeria-grid {
 	display: grid;
 	grid-row-gap: 20px;
@@ -204,6 +213,7 @@ img {
 
 .secao-1 img {
 	min-height: 400px;
+	max-height: 800px;
 	object-fit: cover;
 	display: flex;
 }
@@ -228,18 +238,6 @@ img {
 	font-weight: 400;
 	color: white;
 	margin: 10px 0 30px;
-}
-
-.secao-1 .btn-link {
-	border: 1px solid white;
-	display: inline-block;
-	padding: 9px 25px;
-	text-transform: uppercase;
-	font-size: 13px;
-	letter-spacing: 2px;
-	border-radius: 4px;
-	color: white;
-	transition: .3s;
 }
 
 .secao-1 .btn-link:hover {
@@ -332,10 +330,10 @@ img {
 footer {
 	color: white;
 	text-align: center;
+	background: rgb(33, 33, 33);
 }
 
 footer .container {
-	background: rgb(33, 33, 33);
 	padding: 60px 10px 0;
 	display: grid;
 	grid-template-columns: auto;
@@ -375,7 +373,7 @@ footer .redes-sociais a {
 }
 
 footer .redes-sociais a:hover {
-	color: white;
+	color: var(--color-yellow);
 }
 
 footer .copy {
@@ -383,7 +381,7 @@ footer .copy {
 	font-size: 14px;
 	line-height: 27px;
 	padding: 40px 0;
-	margin-top: 80px;
+	margin-top: 40px;
 	max-width: 455px;
 	margin-right: auto;
 	margin-left: auto;
@@ -410,4 +408,153 @@ footer .btn-aoTopo {
 	border-radius: 5px;
 	cursor: pointer;
 	color: white;
+	visibility: hidden;
+	opacity: 0;
+	transition: .5s;
+}
+
+footer .btn-aoTopo.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+@media(min-width: 480px) {
+	.container {
+		max-width: 450px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media(min-width: 768px) {
+	.container {
+		max-width: 750px;
+	}
+
+	.galeria-grid {
+		grid-column-gap: 20px;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.secao-1 .titulo {
+		font-size: 25px;
+	}
+
+	.secao-1 p {
+		font-size: 16px;
+	}
+
+	.secao-2 .textos .paragrafo, .secao-4 .textos .paragrafo, .secao-6 .textos .paragrafo {
+		max-width: 500px;
+	}
+}
+
+@media(min-width: 850px) {
+	.secao-1 .titulo {
+		font-size: 35px;
+	}
+
+	.secao-1 p {
+		font-size: 20px;
+	}
+
+	footer .container {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	footer .contact {
+		grid-row: 1 / 2;
+		grid-column: 3 / 4;
+	}
+
+	footer .redes-sociais, footer .copy {
+		grid-column: 1 / -1;
+	}
+
+	footer .copy {
+		margin-top: 0px;
+		max-width: 100%;
+	}
+}
+
+@media(min-width: 992px) {
+
+	header .container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		z-index: 100;
+	}
+
+	nav.navegacao {
+		display: flex;
+		align-items: center;
+		height: auto;
+	}
+
+	nav.navegacao .menu {
+		display: flex;
+		padding: 0;
+		background: transparent;
+	}
+
+	nav.navegacao.active {
+		height: auto;
+	}
+
+	nav.navegacao .menu li + li {
+		margin-top: 0;
+		margin-left: 15px;
+	}
+
+	nav.navegacao .menu a {
+		padding: 5px 10px;
+	}
+
+	.btn-reservation.btn-link {
+		display: inline-block;
+		padding: 13px 15px;
+		margin-left: 20px;
+	}
+
+	.btn-reservation.btn-link:hover {
+		background: white;
+		color: #212121;
+	}
+
+	.btn-menu {
+		display: none;
+	}
+
+	.secao-1 {
+		position: relative;
+		top: -100px;
+		margin-bottom: -100px;
+	}
+
+	.container {
+		max-width: 100%;
+	}
+
+	.secao-2 .container,.secao-4 .container, .secao-6 .container {
+		display: grid;
+		grid-column-gap: 20px;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.secao-4 .galeria {
+		grid-template-columns: minmax(100px, 150px) minmax(100px, 150px) minmax(100px, 150px);
+		margin-top: 0;
+	}
+
+	.secao-1 .titulo {
+		font-size: 45px;
+	}
+}
+
+@media(min-width: 1500px) {
+	.container {
+		max-width: 1470px;
+	}
 }
