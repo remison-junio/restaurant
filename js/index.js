@@ -13,3 +13,20 @@ btnMenu.addEventListener('click', (e)=> {
 		btnMenu.classList.remove('active')
 	}	
 })
+
+const btnAoTopo = document.querySelector('.btn-aoTopo')
+
+window.addEventListener('scroll', e => {
+	if(window.scrollY > 100) {
+		btnAoTopo.classList.add('active')
+	} else {
+		btnAoTopo.classList.remove('active')
+	}
+})
+
+btnAoTopo.addEventListener('click', ()=> {
+	window.scrollTo({
+	    top: 0,
+	    behavior: 'smooth'
+	 })
+})
