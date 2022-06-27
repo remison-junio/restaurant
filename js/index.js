@@ -1,5 +1,3 @@
-//Botão Abrir e fechar Menu
-
 const btnMenu = document.querySelector('#btn-menu')
 const navegacao = document.querySelector('nav.navegacao')
 
