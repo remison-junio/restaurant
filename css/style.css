@@ -386,15 +386,6 @@ footer .copy {
 	margin-left: auto;
 }
 
-footer .copy a {
-	color: #BBB;
-	transition: .3s;
-}
-
-footer .copy a:hover {
-	color: var(--color-yellow);
-}
-
 footer .btn-aoTopo {
 	z-index: 100;
 	border: none;
